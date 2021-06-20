@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@media only screen and (min-width: 560px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        display: grid;
+        grid-template-areas: "header" "article" "section1" "section2" "footer";
+        width: 100vw;
+    }
+    header .imgSmall {
+        display: none;
+    }
+    header .hamBurg {
+        display: none;
+    }
+    header .imgDekstop {
+        display: block;
+        max-width: 100%;
+        height: 650px;
+        margin: 0 auto;
+    }
+    header .logo img {
+        height: 35px;
+        transform: translateY(90%);
+    }
+    header .nav {
+        height: 150px;
+    }
+    header .navContainer {
+        display: block;
+        position: static;
+        width: 500px;
+        /* border: 2px solid black; */
+    }
+    header .navBar {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+    header .navBar::before {
+        display: none;
+    }
+    header .navBar ul {
+        display: flex;
+    }
+    header .navBar ul li a {
+        color: white;
+        margin-left: 40px;
+        font-family: "Fraunces", serif;
+    }
+    header .navBar ul li:nth-child(4) a {
+        background-color: white;
+        padding: 10px;
+        color: hsl(212, 27%, 19%);
+        border-radius: 25px;
+        margin-left: 30px;
+    }
+    header .navBar ul li:nth-child(4) a:hover {
+        background-color: rgb(158, 223, 255);
+        color: white;
+    }
+    /* article section */
+    article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    article .box {
+        flex-basis: 50%;
+        height: 600px;
+    }
+    article .box1 {
+        order: 2;
+    }
+    article .box1 img {
+        width: 100%;
+        height: 600px;
+    }
+    article .box2 {
+        width: 100%;
+        /* height: auto; */
+        order: 1;
+        /* overflow: auto; */
+    }
+    article .box2 p,
+    article .box4 p,
+    article .box5 p,
+    article .box6 p {
+        height: 200px;
+        font-size: 2vw;
+    }
+    article .box3 {
+        order: 3;
+    }
+    article .box3 img {
+        width: 100%;
+        height: 600px;
+    }
+    article .box4 {
+        order: 4;
+    }
+    article .box5 {
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        width: 100%;
+        height: 650px;
+        order: 5;
+    }
+    article .box6 {
+        background-image: url(./images/desktop/image-photography.jpg);
+        width: 100%;
+        height: 650px;
+        order: 6;
+    }
+    .footerImg {
+        grid-area: section2;
+        background-color: crimson;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footerImg .ftImg {
+        width: 50%;
+        height: 500px;
+    }
+    .footerImg .ftImg1 {
+        background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+        width: 50%;
+        background-size: 100% 100%;
+    }
+    .footerImg .ftImg2 {
+        background-image: url(./images/desktop/image-gallery-orange.jpg);
+        width: 50%;
+        background-size: 100% 100%;
+    }
+    .footerImg .ftImg3 {
+        background-image: url(./images/desktop/image-gallery-cone.jpg);
+        width: 50%;
+        background-size: 100% 100%;
+    }
+    .footerImg .ftImg4 {
+        background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+        width: 50%;
+        background-size: 100% 100%;
+    }
+}
+
+
+/* for Tablets*/
+
+@media (min-width: 561px) and (max-width:800px) {
+    header .hamBurg {
+        display: block;
+        position: absolute;
+        top: 65px;
+        right: 60px;
+    }
+    article .box2 p,
+    article .box4 p {
+        height: 200px;
+        font-size: 3vw;
+    }
+    header .navContainer {
+        position: absolute;
+        left: 35%;
+        top: 7%;
+    }
+    header .hide {
+        display: none;
+    }
+    header .navBar {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        top: 100px;
+        left: 70px;
+    }
+    header .navBar::before {
+        content: "";
+        display: block;
+        width: 0px;
+        /* height: 50px; */
+        border-bottom: 50px solid white;
+        border-left: 50px solid transparent;
+        /* background-color: white; */
+        position: absolute;
+        top: -50px;
+        right: 0px;
+    }
+    header .navBar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    header .navBar ul li {
+        margin-top: 25px;
+        list-style-type: none;
+    }
+    header .navBar ul li a {
+        text-decoration: none;
+        font-size: 1.4em;
+        font-family: "Barlow", serif;
+        color: grey;
+    }
+    header .navBar ul li:nth-child(4) a {
+        background-color: white;
+        padding: 10px;
+        color: hsl(212, 27%, 19%);
+        border-radius: 25px;
+        margin-left: 27px;
+    }
+    header .navBar ul li:nth-child(4) a:hover {
+        background-color: hsl(51, 100%, 49%);
+        color: white;
+    }
+}
