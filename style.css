@@ -14,6 +14,7 @@
         display: grid;
         grid-template-areas: "header" "article" "section1" "section2" "footer";
         width: 400px;
+        position: relative;
     }
     /* grid item1 */
     
@@ -33,7 +34,7 @@
         height: 7vh;
         display: flex;
         justify-content: space-between;
-        z-index: 100;
+        z-index: 2000;
     }
     
     header .arrow {
@@ -70,6 +71,7 @@
         position: absolute;
         left: 3px;
         top: 5px;
+        z-index: 2000;
     }
     
     header .hide {
@@ -374,19 +376,21 @@
         /* transform: translatex(-3%); */
     }
     
-    header .btTop {
+    main .btTop {
         width: 70px;
-        height: 80px;
+        height: 50px;
         background-color: hsl(7, 99%, 70%);
         opacity: 0.7;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         position: fixed;
-        right: 0;
-        top: 20px;
+        right: 8%;
+        top: 0%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 30px;
         cursor: pointer;
+        z-index: 1000;
     }
