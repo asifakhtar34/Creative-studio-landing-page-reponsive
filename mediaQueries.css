@@ -11,6 +11,13 @@
         grid-template-areas: "header" "article" "section1" "section2" "footer";
         width: 100vw;
     }
+    main .btTop {
+        height: 80px;
+        position: fixed;
+        right: -6%;
+        top: 0%;
+        transform: translateX(-50%);
+    }
     header .imgSmall {
         display: none;
     }
@@ -29,6 +36,7 @@
     }
     header .nav {
         height: 150px;
+        z-index: 2000;
     }
     header .navContainer {
         display: block;
